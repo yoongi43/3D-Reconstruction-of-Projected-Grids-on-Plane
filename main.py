@@ -45,9 +45,6 @@ def main():
     rays = np.zeros((3, 3))  # 두o의 계수 (t1, t2, t3)저장
     real_world_pts = np.zeros((num_grids, 3))
 
-
-    print(proj_C_world)
-
     for k in range(num_grids):
         # P_camera^dagger @ x
         CPdx = cp.P_pinv @ np.append(grids_cam_undistort[k], 1)
